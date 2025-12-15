@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - DARKPONY</title>
+
+    <!-- Usamos el CSS general del sitio -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="page-contacto">
+    <!-- Particles Background -->
+    <div id="particles-js" aria-hidden="true"></div>
+
+    <!-- Header unificado -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-icon">
+                            <img src="darkpony-logo.jpg" alt="Logo DarkPony">
+                        </div>
+                        <span class="logo-text">DARKPONY</span>
+                    </a>
+                </div>
+
+                <!-- Navegación -->
+                <div class="nav-menu" id="mobileMenu">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="servicios.html" class="nav-link">Servicios</a>
+                    <a href="portafolio.html" class="nav-link">Portafolio</a>
+                    <a href="contacto.html" class="nav-link active">Contacto</a>
+                </div>
+
+                <!-- Botón menú móvil -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú">
+                    <i class="fas fa-ellipsis-v"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="fullpage-container">
+        <!-- Contact Section (misma estructura que en index.html) -->
+        <section id="contacto" class="fullpage-section contact-section">
+            <div class="section-container">
+                <h2 class="section-title neon-purple">
+                    Contáctanos
+                </h2>
+                
+                <div class="contact-content">
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h3 class="contact-subtitle neon-blue">Información de Contacto</h3>
+                        
+                        <div class="contact-items">
+                            <div class="contact-item">
+                                <div class="contact-icon phone">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <p class="contact-label">Teléfono</p>
+                                    <p class="contact-value">+52 (56) 5849-1918</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon email">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <p class="contact-label">Email</p>
+                                    <p class="contact-value">info@darkpony.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                               <div class="contact-icon location">
+                             <i class="fas fa-location-dot" aria-hidden="true"></i>
+                                 </div>
+
+                                <div>
+                                    <p class="contact-label">Ubicación</p>
+                                    <p class="contact-value">Avenida Floresta # 90 Colonia Reforma, Ciudad Nezahualcóyotl, México.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-section">
+                            <h4 class="social-title neon-yellow">Síguenos</h4>
+                            <div class="social-links">
+                                <a href="#" class="social-link facebook" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="social-link instagram" aria-label="Instagram">
+                                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="social-link twitter" aria-label="Twitter">
+                                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="social-link youtube" aria-label="YouTube">
+                                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Nombre</label>
+                                <input type="text" id="name" name="name" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Mensaje</label>
+                                <textarea id="message" name="message" rows="5" class="form-textarea" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-submit" aria-label="Enviar mensaje">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i>Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer unificado -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <img src="darkpony-logo.jpg" alt="Logo DarkPony">
+                </div>
+                <span class="logo-text">DARKPONY</span>
+            </div>
+            
+            <p class="footer-text">
+                Transformando ideas en realidad digital desde 2024
+            </p>
+            
+            <div class="footer-copyright">
+                <p>&copy; 2024 DARKPONY. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

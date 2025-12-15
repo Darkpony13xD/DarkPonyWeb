@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DARKPONY - Portafolio</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="portfolio-page">
+
+    <!-- Partículas de fondo -->
+    <div id="particles-js"></div>
+
+    <!-- Header -->
+    <!-- Header -->
+<header class="header">
+    <nav class="nav-container">
+        <div class="nav-content">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <div class="logo-icon">
+                        <img src="darkpony-logo.jpg" alt="Logo DarkPony">
+                    </div>
+                    <span class="logo-text">DARKPONY</span>
+                </a>
+            </div>
+
+            <div class="nav-menu" id="mobileMenu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="servicios.html" class="nav-link">Servicios</a>
+                <a href="portafolio.html" class="nav-link active">Portafolio</a>
+                <a href="contacto.html" class="nav-link ">Contacto</a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú">
+                <i class="fas fa-ellipsis-v"></i>
+            </button>
+        </div>
+    </nav>
+</header>
+
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+
+        <!-- Hero Portafolio -->
+        <section class="portfolio-hero">
+            <div class="section-container portfolio-hero-content">
+                <div class="portfolio-hero-text">
+                 
+                    <h1 class="page-title neon-blue">Trabajos y proyectos</h1>
+                    <p class="page-subtitle">
+                        Una muestra de lo que hemos creado con DarkPony: sitios web, contenido para redes,
+                        branding y experiencias digitales listas para atraer clientes.
+                    </p>
+                </div>
+
+                <div class="portfolio-hero-pony">
+                    <!-- Usa aquí tu pony con la laptop o el que más te guste -->
+                    <img src="img/personaje.png" alt="DarkPony desarrollando proyectos">
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid de proyectos (glass morphism) -->
+        <section class="portfolio-section">
+            <div class="section-container">
+
+                <div class="portfolio-grid">
+
+                    <!-- Proyecto 1 -->
+                    <article class="portfolio-card glass-card">
+                        <div class="portfolio-badge badge-web">Web</div>
+                        <h3 class="portfolio-title">IUSTICIA ABOGADOS</h3>
+                        <p class="portfolio-description">
+                            Página de una sola sección con enfoque en conversión: llamada a la acción,
+                            testimonio y conexión directa a WhatsApp.
+                        </p>
+                        <ul class="portfolio-tags">
+                            <li>Responsive</li>
+                            <li>CTA a WhatsApp</li>
+                            <li>Diseño minimal futurista</li>
+                        </ul>
+                        <!-- Si luego tienes link real, lo pones en href -->
+                        <a href="proyectos/proyecto-iusticia.html" class="portfolio-link">
+                            <span>Ver detalles</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- Proyecto 2 -->
+                    <article class="portfolio-card glass-card">
+                        <div class="portfolio-badge badge-web">Web</div>
+                        <h3 class="portfolio-title">Academia BRT</h3>
+                        <p class="portfolio-description">
+                            Plantillas para Instagram y Facebook, carruseles educativos, y piezas para
+                            promociones mensuales de servicios.
+                        </p>
+                        <ul class="portfolio-tags">
+                            <li>Responsive</li>
+                            <li>CTA a WhatsApp</li>
+                            <li>Diseño minimal futurista</li>
+                        </ul>
+                        <a href="proyectos/proyecto-estetica-brt.html" class="portfolio-link">
+                            <span>Ver detalles</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- Proyecto 3 -->
+                     <article class="portfolio-card glass-card">
+                        <div class="portfolio-badge badge-web">Web</div> 
+                        <h3 class="portfolio-title">THE KRAKEN´S MARK - TATTO ESTUDIO </h3>
+                        <p class="portfolio-description">
+                            Página informativa con mapa, horarios, galería de fotos y botón directo a
+                            WhatsApp para reservas.
+                        </p>
+                        <ul class="portfolio-tags">
+                            <li>Mapa integrado</li>
+                            <li>Galería</li>
+                            <li>Optimización móvil</li>
+                        </ul>
+                        <a href="proyectos/proyecto-tatuajes.html" class="portfolio-link">
+                            <span>Ver detalles</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    
+                    <!-- Proyecto 4 -->
+                   
+                    <article class="portfolio-card glass-card">
+                        <div class="portfolio-badge badge-branding">Branding</div>
+                        <h3 class="portfolio-title">DARKPONY</h3>
+                        <p class="portfolio-description">
+                            Logo, paleta de color, tipografía y aplicaciones básicas para redes y tarjetas
+                            digitales.
+                        </p>
+                        <ul class="portfolio-tags">
+                            <li>Logo y variantes</li>
+                            <li>Manual mini de marca</li>
+                            <li>Aplicaciones digitales</li>
+                        </ul>
+                        <a href="proyectos/proyecto_branding.html" class="portfolio-link">
+                            <span>Ver detalles</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </article>
+                </div>
+
+                <!-- CTA final -->
+                <section class="cta-section cta-portfolio">
+                    <h2 class="cta-title">¿Quieres que tu proyecto sea el siguiente?</h2>
+                    <p class="cta-subtitle">
+                        Escríbenos y armamos algo a la medida de tu marca: desarrollo web, redes sociales,
+                        branding y más.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="https://wa.me/52XXXXXXXXXX" target="_blank" class="btn-primary cta-btn">
+                            <i class="fab fa-whatsapp"></i> Hablemos por WhatsApp
+                        </a>
+                        
+                    </div>
+                </section>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <img src="darkpony-logo.jpg" alt="Logo DarkPony">
+                </div>
+                <span class="logo-text">DARKPONY</span>
+            </div>
+            <p class="footer-text">
+                Transformando ideas en experiencias digitales desde 2024.
+            </p>
+            <div class="footer-copyright">
+                <p>© 2024 DARKPONY. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

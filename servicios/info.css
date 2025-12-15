@@ -1,0 +1,150 @@
+/* ===========================
+   ESTILO PARA PÁGINAS EDUCATIVAS
+   =========================== */
+
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap');
+
+body.info-page {
+    background: #000;
+    color: #fff;
+    font-family: 'Exo 2', sans-serif;
+    /* color por defecto (si no se especifica otra) */
+    --accent: #ffe75b;
+}
+
+/* Colores por servicio */
+body.info-branding {
+    --accent: #ffe75b; /* amarillo */
+}
+
+body.info-web {
+    --accent: #5bc9ff; /* azul clarito neon */
+}
+
+body.info-social {
+    --accent: #ff7bde; /* rosa neon social media */
+}
+
+body.info-marketing {
+    --accent: #a07bff; /* morado digital */
+}
+
+/* HEADER INFO */
+.info-header {
+    text-align: center;
+    padding: 7rem 1rem 2rem; /* separado del header fijo */
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+    z-index: 5; /* asegura que NO quede debajo del header */
+}
+
+.info-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 15px var(--accent);
+}
+
+.info-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Texto con color de acento */
+.yellow {
+    color: var(--accent);
+    text-shadow: 0 0 8px var(--accent);
+}
+
+/* SECCIONES DE INFORMACIÓN */
+.info-section {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.14); /* neutro para que funcione con todos los colores */
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+}
+
+.info-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--accent);
+}
+
+.info-section p {
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+.info-section ul {
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.info-section li {
+    margin-bottom: 0.6rem;
+}
+
+/* CTA CENTRAL GRANDE */
+.cta-area {
+    text-align: center;
+    margin: 4rem auto;
+}
+
+.cta-btn-special {
+    background: var(--accent);
+    color: #000;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
+}
+
+.cta-btn-special:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--accent);
+}
+
+/* BOTÓN "VOLVER A SERVICIOS" (ARRIBA Y ABAJO) */
+.back-btn-glow {
+    display: inline-block;
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid var(--accent);
+    border-radius: 14px;
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: none;
+    backdrop-filter: blur(6px);
+    text-shadow: 0 0 8px var(--accent);
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.8);
+    transition: 0.3s ease;
+}
+
+.back-btn-glow:hover {
+    background: var(--accent);
+    color: #000;
+    box-shadow: 0 0 22px var(--accent);
+    transform: translateX(-4px);
+}
+
+/* Botón de "Volver a servicios" AL FINAL de la página */
+.back-end {
+    text-align: center;
+    margin: 3.5rem 0 2rem;
+}
+
+.back-end .back-btn-glow {
+    font-size: 1.1rem;
+    padding: 12px 28px;
+}
