@@ -720,3 +720,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+document.addEventListener("click", (e) => {
+  const preview = e.target.closest(".branding-image-preview");
+  if (!preview) return;
+
+  const src = preview.dataset.img;
+  // aquí abre tu modal con src
+});

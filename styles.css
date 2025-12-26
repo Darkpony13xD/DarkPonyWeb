@@ -2940,3 +2940,90 @@ color: #0a0a0a;
 }
 
 
+/* ===== DarkPony breadcrumb (más acorde / neon gradient) ===== */
+.portfolio-hero-text{
+  position: relative;
+  z-index: 10;
+}
+
+a.portfolio-breadcrumb{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 10px 18px;
+  border-radius: 999px;
+
+  text-decoration: none;
+  font-family: "Orbitron", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+
+  color: var(--color-text) !important;
+  background: rgba(0,0,0,.35);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.06) inset,
+    0 0 30px rgba(188, 19, 254, .14),
+    0 0 26px rgba(0, 255, 255, .10);
+
+  transition: var(--transition);
+}
+
+/* Flecha neon */
+a.portfolio-breadcrumb::before{
+  content: "◀";
+  font-size: 12px;
+  color: var(--neon-yellow);
+  text-shadow:
+    0 0 10px rgba(255,215,0,.55),
+    0 0 18px rgba(255,215,0,.25);
+}
+
+/* Línea neon animada abajo (muy DarkPony) */
+a.portfolio-breadcrumb::after{
+  content:"";
+  position:absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 6px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--gradient-primary);
+  opacity: .85;
+  transform: scaleX(.35);
+  transform-origin: left;
+  filter: drop-shadow(0 0 10px rgba(0,255,255,.35))
+          drop-shadow(0 0 10px rgba(188,19,254,.25));
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+a.portfolio-breadcrumb:hover{
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,.22);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.08) inset,
+    0 0 38px rgba(255,215,0,.10),
+    0 0 40px rgba(0,255,255,.12),
+    0 0 40px rgba(188,19,254,.12);
+}
+
+a.portfolio-breadcrumb:hover::after{
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+a.portfolio-breadcrumb:focus-visible{
+  outline: 2px solid rgba(0,255,255,.65);
+  outline-offset: 4px;
+}
+
+/* Si tu fondo tiene canvas/lines encima, esto ayuda a que no lo tape */
+.portfolio-hero-bg,
+canvas{
+  pointer-events: none;
+}
