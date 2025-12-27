@@ -766,7 +766,6 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="dp-tile"><div class="dp-num" data-dp="m">--</div><div class="dp-lbl">Min</div></div>
             <div class="dp-tile"><div class="dp-num" data-dp="s">--</div><div class="dp-lbl">Seg</div></div>
           </div>
-          <div class="dp-foot">Tip: para ver el sitio antes, abre con <strong>?preview=1</strong></div>
         </div>
 
         <aside class="dp-side">
