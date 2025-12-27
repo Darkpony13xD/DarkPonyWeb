@@ -727,3 +727,94 @@ document.addEventListener("click", (e) => {
   const src = preview.dataset.img;
   // aquí abre tu modal con src
 });
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Modo preview: agrega ?preview=1 para ver el sitio antes del lanzamiento
+  if (new URLSearchParams(location.search).has("preview")) return;
+
+  // 1 de enero 2026 00:00 CDMX
+  const LAUNCH_AT = new Date("2026-01-01T00:00:00-06:00");
+  if (new Date() >= LAUNCH_AT) return;
+
+  const overlay = document.createElement("div");
+  overlay.className = "dp-launch";
+  overlay.innerHTML = `
+    <section class="dp-card" role="dialog" aria-modal="true" aria-label="Sitio en construcción">
+      <div class="dp-top">
+        <div class="dp-badge"><span class="dp-dot"></span> EN CONSTRUCCIÓN</div>
+        <div class="dp-date">Apertura automática: <strong>01/01/2026</strong> (CDMX)</div>
+      </div>
+
+      <h1 class="dp-title"><span>DARKPONY</span></h1>
+      <p class="dp-sub">Estamos preparando el lanzamiento. Vuelve el <strong>1 de enero</strong>.</p>
+
+      <div class="dp-grid">
+        <div>
+          <div class="dp-count" aria-label="Cuenta regresiva">
+            <div class="dp-tile"><div class="dp-num" data-dp="d">--</div><div class="dp-lbl">Días</div></div>
+            <div class="dp-tile"><div class="dp-num" data-dp="h">--</div><div class="dp-lbl">Horas</div></div>
+            <div class="dp-tile"><div class="dp-num" data-dp="m">--</div><div class="dp-lbl">Min</div></div>
+            <div class="dp-tile"><div class="dp-num" data-dp="s">--</div><div class="dp-lbl">Seg</div></div>
+          </div>
+          <div class="dp-foot">Tip: para ver el sitio antes, abre con <strong>?preview=1</strong></div>
+        </div>
+
+        <aside class="dp-side">
+          <div style="color: var(--color-text-secondary);">
+            ✨ Nuevo sitio, nuevo vibe.<br/>
+            <span style="opacity:.8">Gracias por tu paciencia.</span>
+          </div>
+          <div class="dp-actions">
+            <a class="dp-btn dp-btn--primary" href="#" onclick="return false;">Apertura 1 de Enero</a>
+            
+          </div>
+        </aside>
+      </div>
+    </section>
+  `;
+
+  document.body.appendChild(overlay);
+  document.body.classList.add("dp-no-scroll");
+
+  const elD = overlay.querySelector('[data-dp="d"]');
+  const elH = overlay.querySelector('[data-dp="h"]');
+  const elM = overlay.querySelector('[data-dp="m"]');
+  const elS = overlay.querySelector('[data-dp="s"]');
+
+  const pad = (n) => String(n).padStart(2, "0");
+
+  function tick() {
+    const now = new Date();
+    if (now >= LAUNCH_AT) {
+      overlay.remove();
+      document.body.classList.remove("dp-no-scroll");
+      return;
+    }
+
+    const diff = LAUNCH_AT - now;
+    const total = Math.floor(diff / 1000);
+
+    const days = Math.floor(total / (3600 * 24));
+    const hours = Math.floor((total % (3600 * 24)) / 3600);
+    const mins = Math.floor((total % 3600) / 60);
+    const secs = total % 60;
+
+    elD.textContent = String(days);
+    elH.textContent = pad(hours);
+    elM.textContent = pad(mins);
+    elS.textContent = pad(secs);
+  }
+
+  tick();
+  setInterval(tick, 1000);
+});
