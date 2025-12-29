@@ -770,7 +770,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <aside class="dp-side">
           <div style="color: var(--color-text-secondary);">
-            ✨ Nuevo sitio, nuevo vibe.<br/>
+            ✨ Nuevo sitio, una vibe diferente .<br/>
             <span style="opacity:.8">Gracias por tu paciencia.</span>
           </div>
           <div class="dp-actions">
