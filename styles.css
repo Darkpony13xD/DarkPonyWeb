@@ -915,6 +915,11 @@ color: #0a0a0a;
     margin-top: 2.5rem;
 }
 
+/* Asegura que las tarjetas ocupen la misma altura en la fila */
+.what-grid {
+    align-items: stretch;
+}
+
 .what-card {
     position: relative;
     background: rgba(0, 0, 0, 0.85);
@@ -924,6 +929,14 @@ color: #0a0a0a;
     box-shadow: 0 16px 38px rgba(0, 0, 0, 0.85);
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* Estructura en columna para empujar el CTA al fondo */
+.what-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 260px;
 }
 
 .what-card:hover {
@@ -964,6 +977,10 @@ color: #0a0a0a;
     border-color: rgba(0, 196, 255, 0.7);
     box-shadow: 0 0 22px rgba(0, 196, 255, 0.2);
 }
+.what-green {
+    border-color: rgba(0, 230, 128, 0.75);
+    box-shadow: 0 0 26px rgba(0, 230, 128, 0.18);
+}
 .what-red {
     border-color: rgba(255, 70, 90, 0.8);
     box-shadow: 0 0 22px rgba(255, 70, 90, 0.25);
@@ -974,17 +991,100 @@ color: #0a0a0a;
 .what-purple .what-title { color: #e07bff; }
 .what-blue   .what-title { color: #4db7ff; }
 .what-red    .what-title { color: #ff5b6b; }
+.what-green  .what-title { color: #00e680; }
 
 /* Botón de abajo */
 
-.what-cta {
-    margin-top: 3rem;
+.what-cta,
+.what-card-cta {
+    margin-top: 1.6rem;
     text-align: center;
 }
 
+.what-card-cta {
+    margin-top: auto; /* empuja el botón hacia el fondo de la tarjeta */
+    text-align: center;
+    padding-top: 1rem; /* separación extra entre texto y botón */
+}
+
+/* Botones más compactos, con variantes por tarjeta */
 .what-btn {
-    padding-inline: 2.4rem;
-    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.45rem 1.1rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border: none; /* quitar borde blanco visible */
+    transition: transform 0.14s ease, box-shadow 0.14s ease, filter 0.14s ease;
+}
+
+/* Hover / focus behavior (shared) */
+.what-btn:hover,
+.what-btn:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(0,0,0,0.6);
+}
+.what-btn:active { transform: translateY(-1px) scale(0.995); }
+.what-btn i { font-size: 0.9rem; }
+.what-btn:focus-visible {
+    outline: 3px solid rgba(0,0,0,0.25);
+    outline-offset: 3px;
+}
+
+/* Variantes por color de tarjeta */
+.what-yellow .what-btn {
+    background: linear-gradient(90deg, #ffd700 0%, #ffea66 100%);
+    color: #050509;
+    box-shadow: 0 8px 26px rgba(255,215,0,0.12);
+}
+.what-purple .what-btn {
+    background: linear-gradient(90deg, #b300ff 0%, #e07bff 100%);
+    color: #050509;
+    box-shadow: 0 8px 26px rgba(188,19,254,0.12);
+}
+.what-blue .what-btn {
+    background: linear-gradient(90deg, #00c4ff 0%, #4db7ff 100%);
+    color: #050509;
+    box-shadow: 0 8px 26px rgba(77,183,255,0.10);
+}
+.what-green .what-btn {
+    background: linear-gradient(90deg, #00e680 0%, #00c46b 100%);
+    color: #050509;
+    box-shadow: 0 8px 26px rgba(0,230,128,0.10);
+}
+
+/* Hover/focus colored glow por variante */
+.what-yellow .what-btn:hover,
+.what-yellow .what-btn:focus-visible {
+    box-shadow: 0 24px 70px rgba(0,0,0,0.75), 0 0 48px rgba(255,215,0,0.78);
+    outline: 4px solid rgba(255,215,0,0.65);
+    outline-offset: 4px;
+}
+.what-purple .what-btn:hover,
+.what-purple .what-btn:focus-visible {
+    box-shadow: 0 24px 70px rgba(0,0,0,0.75), 0 0 48px rgba(179,0,255,0.78);
+    outline: 4px solid rgba(179,0,255,0.65);
+    outline-offset: 4px;
+}
+.what-blue .what-btn:hover,
+.what-blue .what-btn:focus-visible {
+    box-shadow: 0 24px 70px rgba(0,0,0,0.75), 0 0 48px rgba(0,196,255,0.78);
+    outline: 4px solid rgba(0,196,255,0.65);
+    outline-offset: 4px;
+}
+.what-green .what-btn:hover,
+.what-green .what-btn:focus-visible {
+    box-shadow: 0 24px 70px rgba(0,0,0,0.75), 0 0 48px rgba(0,230,128,0.78);
+    outline: 4px solid rgba(0,230,128,0.65);
+    outline-offset: 4px;
+}
+
+@media (max-width: 520px) {
+    .what-btn { padding: 0.4rem 0.9rem; font-size: 0.85rem; }
 }
 
 /* Responsive */
