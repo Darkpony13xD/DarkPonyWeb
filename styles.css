@@ -1021,6 +1021,17 @@ color: #0a0a0a;
 }
 
 /* Botones más compactos, con variantes por tarjeta */
+
+a.what-btn,
+a.what-btn:visited {
+  text-decoration: none !important;
+  color: #050509 !important;
+}
+a.what-btn {
+  background-color: transparent;
+  background-image: inherit;
+}
+
 .what-btn {
   display: inline-flex;
   align-items: center;
@@ -1054,25 +1065,22 @@ color: #0a0a0a;
 }
 
 /* Variantes por color de tarjeta */
-.what-yellow .what-btn {
-  background-image: linear-gradient(90deg, #ffd700 0%, #ffea66 100%);
-  color: #050509;
+.what-yellow a.what-btn {
+  background-image: linear-gradient(90deg, #ffd700 0%, #ffea66 100%) !important;
 }
 
-.what-purple .what-btn {
-  background-image: linear-gradient(90deg, #b300ff 0%, #e07bff 100%);
-  color: #050509;
+.what-purple a.what-btn {
+  background-image: linear-gradient(90deg, #b300ff 0%, #e07bff 100%) !important;
 }
 
-.what-blue .what-btn {
-  background-image: linear-gradient(90deg, #00c4ff 0%, #4db7ff 100%);
-  color: #050509;
+.what-blue a.what-btn {
+  background-image: linear-gradient(90deg, #00c4ff 0%, #4db7ff 100%) !important;
 }
 
-.what-green .what-btn {
-  background-image: linear-gradient(90deg, #00e680 0%, #00c46b 100%);
-  color: #050509;
+.what-green a.what-btn {
+  background-image: linear-gradient(90deg, #00e680 0%, #00c46b 100%) !important;
 }
+
 
 
 /* Hover/focus colored glow por variante */
