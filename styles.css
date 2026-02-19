@@ -55,9 +55,13 @@ body {
     font-size: 1.1rem;
     cursor: pointer;
     transition: var(--transition);
-    display: flex;
+   display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
+     transform: translateZ(0);
+    will-change: transform;
+    
 }
 
 /* Loading Screen */
@@ -440,7 +444,8 @@ color: #0a0a0a;
 }
 
 .btn-primary {
-    background: var(--gradient-primary);
+  background-image: var(--gradient-primary);
+    background-repeat: no-repeat;
     color: white;
 }
 
@@ -3372,4 +3377,10 @@ canvas{
   font-size: 12px;
   color: var(--color-text-muted);
   opacity: .9;
+}
+
+@supports not (backdrop-filter: blur(20px)) {
+    .header {
+        background: rgba(0, 0, 0, 0.95);
+    }
 }
