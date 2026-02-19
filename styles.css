@@ -3419,3 +3419,48 @@ canvas{
         background: rgba(0, 0, 0, 0.95);
     }
 }
+/* ===============================
+   BOTONES DE CARDS – ESTABLES
+   =============================== */
+
+.card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  border: none;
+  cursor: pointer;
+
+  color: #050509;
+  white-space: nowrap;
+
+  background-size: 200% 200%;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.card-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Variantes por color */
+.card-btn-yellow {
+  background: linear-gradient(90deg, #ffd700, #ffea66);
+  box-shadow: 0 6px 18px rgba(255,215,0,.25);
+}
+
+.card-btn-purple {
+  background: linear-gradient(90deg, #b300ff, #e07bff);
+  box-shadow: 0 6px 18px rgba(179,0,255,.25);
+}
+
+.card-btn-blue {
+  background: linear-gradient(90deg, #00c4ff, #4db7ff);
+  box-shadow: 0 6px 18px rgba(0,196,255,.25);
+}
