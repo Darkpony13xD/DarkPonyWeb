@@ -1028,22 +1028,32 @@ a.what-btn:visited {
   color: #050509 !important;
 }
 a.what-btn {
-  background-color: transparent;
-  background-image: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  line-height: 1;
+  min-height: 32px;
+  box-sizing: border-box;
+
+  text-decoration: none !important;
+  color: #050509 !important;
 }
+
 
 .what-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-
+ line-height: 1;
+  min-height: 32px;
   padding: 0.45rem 1.1rem;
   border-radius: 999px;
 
   font-weight: 700;
   font-size: 0.9rem;
-
+  box-sizing: border-box;
   border: none;
   cursor: pointer;
 
