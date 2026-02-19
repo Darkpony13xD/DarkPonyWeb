@@ -978,26 +978,19 @@ color: #0a0a0a;
 
 /* Colores de borde y glow por tarjeta */
 
-.what-yellow {
-    border-color: rgba(255, 215, 0, 0.7);
-    box-shadow: 0 0 22px rgba(255, 215, 0, 0.2);
+.what-card.what-green {
+  border-color: rgba(0,230,128,0.85);
 }
-.what-purple {
-    border-color: rgba(188, 19, 254, 0.7);
-    box-shadow: 0 0 22px rgba(188, 19, 254, 0.2);
+.what-card.what-yellow {
+  border-color: rgba(255,215,0,0.75);
 }
-.what-blue {
-    border-color: rgba(0, 196, 255, 0.7);
-    box-shadow: 0 0 22px rgba(0, 196, 255, 0.2);
+.what-card.what-purple {
+  border-color: rgba(188,19,254,0.75);
 }
-.what-green {
-    border-color: rgba(0, 230, 128, 0.75);
-    box-shadow: 0 0 26px rgb(3, 255, 142);
+.what-card.what-blue {
+  border-color: rgba(0,196,255,0.75);
 }
-.what-red {
-    border-color: rgba(255, 70, 90, 0.8);
-    box-shadow: 0 0 22px rgba(255, 70, 90, 0.25);
-}
+
 
 /* Título con color a juego (puedes cambiar si quieres) */
 .what-yellow .what-title { color: #ffd700; }
