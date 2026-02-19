@@ -444,8 +444,8 @@ color: #0a0a0a;
 }
 
 .btn-primary {
-  background-image: var(--gradient-primary);
-    background-repeat: no-repeat;
+     background-image: var(--gradient-primary, linear-gradient(90deg, #00ffcc, #a855f7));
+  background-repeat: no-repeat;
     color: white;
 }
 
