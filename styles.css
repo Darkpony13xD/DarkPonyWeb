@@ -992,7 +992,7 @@ color: #0a0a0a;
 }
 .what-green {
     border-color: rgba(0, 230, 128, 0.75);
-    box-shadow: 0 0 26px rgba(0, 230, 128, 0.18);
+    box-shadow: 0 0 26px rgb(3, 255, 142);
 }
 .what-red {
     border-color: rgba(255, 70, 90, 0.8);
