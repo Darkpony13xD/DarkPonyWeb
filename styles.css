@@ -444,10 +444,18 @@ color: #0a0a0a;
 }
 
 .btn-primary {
-     background-image: var(--gradient-primary, linear-gradient(90deg, #00ffcc, #a855f7));
-  background-repeat: no-repeat;
-    color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #050509;
+  text-decoration: none;
+  border: none;
+
+  transform: translateZ(0);
+  will-change: transform;
 }
+
 
 .btn-primary:hover, .btn-primary:focus-visible {
     transform: translateY(-2px);
@@ -1014,18 +1022,23 @@ color: #0a0a0a;
 
 /* Botones más compactos, con variantes por tarjeta */
 .what-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.45rem 1.1rem;
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-decoration: none;
-    border: none; /* quitar borde blanco visible */
-    transition: transform 0.14s ease, box-shadow 0.14s ease, filter 0.14s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+
+  font-weight: 700;
+  font-size: 0.9rem;
+
+  border: none;
+  cursor: pointer;
+
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
 }
+
 
 /* Hover / focus behavior (shared) */
 .what-btn:hover,
@@ -1042,25 +1055,25 @@ color: #0a0a0a;
 
 /* Variantes por color de tarjeta */
 .what-yellow .what-btn {
-    background: linear-gradient(90deg, #ffd700 0%, #ffea66 100%);
-    color: #050509;
-    box-shadow: 0 8px 26px rgba(255,215,0,0.12);
+  background-image: linear-gradient(90deg, #ffd700 0%, #ffea66 100%);
+  color: #050509;
 }
+
 .what-purple .what-btn {
-    background: linear-gradient(90deg, #b300ff 0%, #e07bff 100%);
-    color: #050509;
-    box-shadow: 0 8px 26px rgba(188,19,254,0.12);
+  background-image: linear-gradient(90deg, #b300ff 0%, #e07bff 100%);
+  color: #050509;
 }
+
 .what-blue .what-btn {
-    background: linear-gradient(90deg, #00c4ff 0%, #4db7ff 100%);
-    color: #050509;
-    box-shadow: 0 8px 26px rgba(77,183,255,0.10);
+  background-image: linear-gradient(90deg, #00c4ff 0%, #4db7ff 100%);
+  color: #050509;
 }
+
 .what-green .what-btn {
-    background: linear-gradient(90deg, #00e680 0%, #00c46b 100%);
-    color: #050509;
-    box-shadow: 0 8px 26px rgba(0,230,128,0.10);
+  background-image: linear-gradient(90deg, #00e680 0%, #00c46b 100%);
+  color: #050509;
 }
+
 
 /* Hover/focus colored glow por variante */
 .what-yellow .what-btn:hover,
@@ -1102,6 +1115,10 @@ color: #0a0a0a;
     .what-grid {
         gap: 1.5rem;
     }
+}
+
+.what-btn {
+  background-clip: padding-box;
 }
 
 /* Imagen de mascota dentro del icono de servicio */
