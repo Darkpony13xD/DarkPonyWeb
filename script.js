@@ -343,7 +343,8 @@ function initializeHeaderScroll() {
 
 function initializeNavigationHighlight() {
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
+    // El resaltado por scroll solo controla enlaces a secciones de esta página.
+    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
 
     if (!sections.length || !navLinks.length) return;
 
